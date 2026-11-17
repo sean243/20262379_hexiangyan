@@ -1,8 +1,7 @@
 // ============================================================
 // Complex.cpp - Complex 类成员函数实现
 //
-// 每个函数都留了 TODO，补全后运行 ./build/complex_demo，
-// 应该输出：
+// 补全后运行 ./build/complex_demo，应该输出：
 //   a = 3 + 4i
 //   a + b = 4 + 6i
 //   a - b = 2 + 2i
@@ -15,35 +14,37 @@
 
 using namespace std;
 
+// 构造函数：用初始化列表给成员赋值，比在函数体里赋值少一次默认构造
 Complex::Complex(double r, double i) : real(r), imag(i) {
 }
 
+// 析构函数：本类不持有动态资源，函数体空着即可
 Complex::~Complex() {
 }
 
-// TODO(4): 复数相加
+// 复数相加：返回一个新对象，两个操作数都保持 const 不变
 Complex Complex::operator+(const Complex& other) const {
-    (void)other;
-    return Complex();  // 占位，实现后删掉
+    return Complex(real + other.real, imag + other.imag);
 }
 
-// TODO(5): 复数相减
+// 复数相减
 Complex Complex::operator-(const Complex& other) const {
-    (void)other;
-    return Complex();  // 占位，实现后删掉
+    return Complex(real - other.real, imag - other.imag);
 }
 
-// TODO(6): 按约定格式打印
+// 按 a + bi / a - bi 的格式打印
 void Complex::print() const {
-    cout << "TODO" << endl;
+    if (imag >= 0.0) {
+        cout << real << " + " << imag << "i" << endl;
+    } else {
+        cout << real << " - " << -imag << "i" << endl;
+    }
 }
 
-// TODO(7)
 double Complex::getReal() const {
-    return 0;  // 占位
+    return real;
 }
 
-// TODO(8)
 double Complex::getImag() const {
-    return 0;  // 占位
+    return imag;
 }
