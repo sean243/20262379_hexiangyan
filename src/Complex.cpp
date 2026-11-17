@@ -1,5 +1,5 @@
 // ============================================================
-// Complex.cpp - Complex 类成员函数实现（
+// Complex.cpp - Complex 类成员函数实现
 //
 // 每个函数都留了 TODO，补全后运行 ./build/complex_demo，
 // 应该输出：
@@ -15,13 +15,9 @@
 
 using namespace std;
 
-// TODO(2): 用初始化列表实现，例如 : real(r), imag(i)
-Complex::Complex(double r, double i) {
-    (void)r;  // 占位，实现后删掉
-    (void)i;
+Complex::Complex(double r, double i) : real(r), imag(i) {
 }
 
-// TODO(3): 实现析构函数（本类没有动态内存，函数体可以为空）
 Complex::~Complex() {
 }
 
