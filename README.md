@@ -101,10 +101,10 @@ cmake --build build
 
 ## 七、我的说明（5 分，请填写）
 
-- 姓名：
-- 学号：
-- 实现思路：
-- 遇到的问题与解决：
+- 姓名：何相彦
+- 学号：20262379
+- 实现思路：private 区放两个 double 成员 real、imag 分别表示实部虚部；构造函数用初始化列表 `: real(r), imag(i)` 直接初始化成员，省掉先默认构造再赋值的一次开销；operator+ / operator- 声明成 const 成员函数、参数用 const 引用，这样既不修改两个操作数，也不用拷贝传参，函数内部返回一个新的临时 Complex 对象；print() 按虚部的符号分两支输出，虚部为负时先取绝对值再自己在中间打印减号，这样不会出现 `3 + -4i`。
+- 遇到的问题与解决：一开始只在 Complex.cpp 里直接写 real / imag，编译报 `real was not declared in this scope`，原因是数据成员还没在 Complex.h 的 private 区声明，补上两个 double 后解决；另外第一次 cmake 配置时报找不到 Ninja，装上 ninja-build 后正常。
 
 ## 八、提交前自检清单
 
