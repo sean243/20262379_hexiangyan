@@ -109,18 +109,18 @@ cmake --build build
 ## 八、提交前自检清单
 
 ```markdown
-- [ ] 仓库名为 `<学号>_<拼音姓名>` 且为 Public（不含中文）
-- [ ] `cmake -B build -G Ninja` 无报错
-- [ ] `cmake --build build` 无 error
-- [ ] `./build/complex_demo` 输出 `a + b = 4 + 6i`
-- [ ] `ctest` 显示 100% tests passed
-- [ ] `include/Complex.h` 的 private 区有 2 个 double 成员
-- [ ] 构造函数使用了初始化列表
-- [ ] 有析构函数 `~Complex()`
-- [ ] 两个运算符都实现且不修改操作数
-- [ ] 模板历史之外，我自己提交 ≥2 次
-- [ ] 没有提交 build/ 或 exe
-- [ ] 「七、我的说明」已填写
+- [x] 仓库名为 `<学号>_<拼音姓名>` 且为 Public（不含中文）
+- [x] `cmake -B build -G Ninja` 无报错
+- [x] `cmake --build build` 无 error
+- [x] `./build/complex_demo` 输出 `a + b = 4 + 6i`
+- [x] `ctest` 显示 100% tests passed
+- [x] `include/Complex.h` 的 private 区有 2 个 double 成员
+- [x] 构造函数使用了初始化列表
+- [x] 有析构函数 `~Complex()`
+- [x] 两个运算符都实现且不修改操作数
+- [x] 模板历史之外，我自己提交 ≥2 次
+- [x] 没有提交 build/ 或 exe
+- [x] 「七、我的说明」已填写
 ```
 
 ## 九、常见问题
