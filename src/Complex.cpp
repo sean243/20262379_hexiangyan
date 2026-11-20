@@ -14,25 +14,25 @@
 
 using namespace std;
 
-// 构造函数：用初始化列表给成员赋值，比在函数体里赋值少一次默认构造
+// 构造函数
 Complex::Complex(double r, double i) : real(r), imag(i) {
 }
 
-// 析构函数：本类不持有动态资源，函数体空着即可
+// 析构函数
 Complex::~Complex() {
 }
 
-// 复数相加：返回一个新对象，两个操作数都保持 const 不变
+// 加法
 Complex Complex::operator+(const Complex& other) const {
     return Complex(real + other.real, imag + other.imag);
 }
 
-// 复数相减
+// 减法
 Complex Complex::operator-(const Complex& other) const {
     return Complex(real - other.real, imag - other.imag);
 }
 
-// 按 a + bi / a - bi 的格式打印
+// 打印
 void Complex::print() const {
     if (imag >= 0.0) {
         cout << real << " + " << imag << "i" << endl;
